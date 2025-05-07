@@ -1,0 +1,4 @@
+site_name: Orbit Decay ES98B-ISEE-Documentation
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
