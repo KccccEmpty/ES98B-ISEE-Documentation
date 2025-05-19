@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="create/">
+        <link rel="next" href="cfg/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -203,6 +203,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -215,6 +228,52 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primary-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary objectives:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-package-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key package features:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-current-known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations &amp; current known issues
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -226,12 +285,12 @@
   
   
     <li class="md-nav__item">
-      <a href="create/" class="md-nav__link">
+      <a href="cfg/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Built by MKDocs
+    Comprehensive Functionality Guide
     
   </span>
   
@@ -248,12 +307,34 @@
   
   
     <li class="md-nav__item">
-      <a href="visuliser/" class="md-nav__link">
+      <a href="en/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Satellite Re-entry Visualisation Demo (temp for 1D)
+    En
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ext
     
   </span>
   
@@ -283,6 +364,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primary-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary objectives:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-package-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key package features:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-current-known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations &amp; current known issues
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -298,9 +414,30 @@
 
 
 <h1 id="introduction">Introduction</h1>
-<p>Documentation of ES98B ISee Group Project</p>
-<h1 id="quick-start">Quick Start</h1>
-<p>...</p>
+<p>This project provides a <strong>satellite orbital decay simulation and a prediction system</strong>, designed to model and predict the trajectory of a satellite (ISEE-3) entering Earth’s atmosphere along an equatorial orbit.</p>
+<h3 id="primary-objectives">Primary objectives:</h3>
+<ul>
+<li>Assist <strong>users</strong> in setting up the environment, indicate reasonable use cases and how to launch and vary the simulation to produce visualisations.</li>
+<li>Guide <strong>developers</strong> to understand how to extend the functionality for advanced use cases.</li>
+</ul>
+<h3 id="key-package-features">Key package features:</h3>
+<ul>
+<li>Configurable orbital decay simulation based on popular physical models and assumptions:</li>
+<li>Spherical Earth, uniform density, constant rotation.</li>
+<li>Time-invariant satellite surface area, non-rotating around any of its axes.</li>
+<li>U.S. Standard Atmosphere 1976 model.</li>
+<li>Isolated system (Earth and satellite).</li>
+<li>Radar-based state estimation using a configurable <strong>Extended Kalman Filter (EKF)</strong>.</li>
+</ul>
+<h3 id="limitations-current-known-issues">Limitations &amp; current known issues</h3>
+<ul>
+<li>A spherical Earth with uniform density is assumed.</li>
+<li>Assumes constant surface area and a non-tumbling satellite.</li>
+<li>Assumes the drag equation is valid from start to end - does not consider non-continuum effects above 86km.</li>
+<li>Constant radar noise model (no occlusion or range bias).</li>
+<li>EKF-based filtering (prone to numerical instability).</li>
+<li>Uncertainty quantification based on Monte Carlo sampling; computationally expensive for large sample sizes.</li>
+</ul>
 
 
 
