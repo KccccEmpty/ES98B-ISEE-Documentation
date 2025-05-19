@@ -45,7 +45,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -592,19 +592,19 @@
 <hr />
 <h3 id="3-predictorpy">3. <code>Predictor.py</code>:</h3>
 <p><strong>Predictor (class)</strong></p>
-<p><strong>process_model (function):</strong> Obtain the prior state, at time $t$, mean by passing the posterior random variable, from time $t-\Delta t$ through the ODE and a sample is taken from a Gaussian random variable, </p>
+<p><strong>process_model (function):</strong> Obtain the prior state, at time <span class="arithmatex">\(t\)</span>, mean by passing the posterior random variable, from time <span class="arithmatex">\(t-\Delta t\)</span> through the ODE and a sample is taken from a Gaussian random variable, </p>
 <ul>
 <li>Inputs:</li>
 <li><code>posterior_state</code>: np.array<ul>
-<li>This is the posterior covariance matrix obtained from the previous iteration $\bar{P}<em>{t-\Delta t}$ / or the initial posterior covariance matrix $P</em>{0}$.</li>
+<li>This is the posterior covariance matrix obtained from the previous iteration <span class="arithmatex">\(\bar{P}_{t-\Delta t}\)</span> / or the initial posterior covariance matrix <span class="arithmatex">\(P_{0}\)</span>.</li>
 </ul>
 </li>
 <li><code>process_covariance</code>: np.array<ul>
-<li>This is the process covariance matrix $Q$. This is a measure of our ‘belief’ in the physics/ in the validity of the model of the dynamics</li>
+<li>This is the process covariance matrix <span class="arithmatex">\(Q\)</span>. This is a measure of our ‘belief’ in the physics/ in the validity of the model of the dynamics</li>
 </ul>
 </li>
 <li><code>timestep</code>: float<ul>
-<li>This is the timestep used in the numerical finite difference method when evaluating the Jacobian of the continuous physics ODE dynamics, $f(.)$, $F_{t}(.)$</li>
+<li>This is the timestep used in the numerical finite difference method when evaluating the Jacobian of the continuous physics ODE dynamics, <span class="arithmatex">\(f(.)\)</span>, <span class="arithmatex">\(F_{t}(.)\)</span></li>
 </ul>
 </li>
 <li><code>t</code>: float<ul>
@@ -612,7 +612,7 @@
 </ul>
 </li>
 <li><code>include_noise</code>: Bool<ul>
-<li>If true, $+Q$ else $+ 0$</li>
+<li>If true, <span class="arithmatex">\(+Q\)</span> else <span class="arithmatex">\(+ 0\)</span></li>
 </ul>
 </li>
 <li><code>verbose</code>: Bool<ul>
@@ -621,11 +621,11 @@
 </li>
 <li>Outputs:</li>
 <li><code>predicted_state_with_noise</code>: np.array<ul>
-<li>$\bar{P}<em>t = F_t \,P</em>{t-\Delta t}\, F_t^T + Q$</li>
+<li><span class="arithmatex">\(\bar{P}_t = F_t \,P_{t-\Delta t}\, F_t^T + Q\)</span></li>
 </ul>
 </li>
 <li><code>predicted_state_without_noise</code>: np.array<ul>
-<li>$\bar{P}t = F_t \,P_{t-\Delta t}\, F_t^T$</li>
+<li><span class="arithmatex">\(\bar{P}t = F_t \,P_{t-\Delta t}\, F_t^T\)</span></li>
 </ul>
 </li>
 </ul>
@@ -646,7 +646,7 @@
 </li>
 <li>Outputs:</li>
 <li><code>h</code> :<ul>
-<li>The projection of the state vector into measurement space, $[r,\dot{r}]$</li>
+<li>The projection of the state vector into measurement space, <span class="arithmatex">\([r,\dot{r}]\)</span></li>
 </ul>
 </li>
 </ul>
@@ -658,7 +658,7 @@
 </ul>
 </li>
 <li>Outputs:</li>
-<li>$F_{t} = \left.\frac{\partial f(\vec{x})}{\partial \vec{x}}\right|<em>{ \vec{x}</em>{t+\Delta t}}$<code>eval_JacobianH()</code>:</li>
+<li><span class="arithmatex">\(F_{t} = \left.\frac{\partial f(\vec{x})}{\partial \vec{x}}\right|_{ \vec{x}_{t+\Delta t}}\)</span><code>eval_JacobianH()</code>:</li>
 </ul>
 <p><strong>eval_JacobianH() (function):</strong> Uses and evaluates at the predicted prior state, the symbolic Jacobians from <code>utils/</code>, to transform the vector from state-space to a lower-dimensional measurement-space representation</p>
 <ul>
@@ -672,7 +672,7 @@
 </ul>
 </li>
 <li>Outputs:</li>
-<li>$H_{t} = \left.\frac{\partial h(\vec{x})}{\partial \vec{x}}\right|<em>{ \vec{x}</em>{t}}$</li>
+<li><span class="arithmatex">\(H_{t} = \left.\frac{\partial h(\vec{x})}{\partial \vec{x}}\right|_{ \vec{x}_{t}}\)</span></li>
 </ul>
 <p><strong>update_prior_belief() (function):</strong> Incorporates uncertainty in equations of motion and the current state’s computed process matrix to find the covariance matrix of the predicted prior state vector</p>
 <ul>
@@ -680,11 +680,11 @@
 <li>Output of evaluation</li>
 <li>Inputs:</li>
 <li><code>process_covariance</code>: np.array<ul>
-<li>This is the process covariance matrix $Q$. This is a measure of our ‘belief’ in the physics/ in the validity of the model of the dynamics</li>
+<li>This is the process covariance matrix <span class="arithmatex">\(Q\)</span>. This is a measure of our ‘belief’ in the physics/ in the validity of the model of the dynamics</li>
 </ul>
 </li>
 <li><code>posterior_state_covariance</code>: np.array<ul>
-<li>$\bar{P}<em>t = F_t \,P</em>{t-\Delta t}\, F_t^T  (+ Q)$</li>
+<li><span class="arithmatex">\(\bar{P}_t = F_t \,P_{t-\Delta t}\, F_t^T  (+ Q)\)</span></li>
 </ul>
 </li>
 <li><code>JacobianV</code> :<ul>
@@ -1091,11 +1091,11 @@
 <p><strong>Key Files</strong></p>
 <ul>
 <li><code>global_variables.py</code>:</li>
-<li><code>G</code>:float = $6.6743×10^{-11}$ $m^3 kg^{-1}s^{-2}$<ul>
+<li><code>G</code>:float = <span class="arithmatex">\(6.6743×10^{-11}\)</span> <span class="arithmatex">\(m^3 kg^{-1}s^{-2}\)</span><ul>
 <li>Gravitational constant</li>
 </ul>
 </li>
-<li><code>M_e:</code> float = $5.972 × 10²$ kg<ul>
+<li><code>M_e:</code> float = <span class="arithmatex">\(5.972 × 10²\)</span> kg<ul>
 <li>Mass of the Earth</li>
 </ul>
 </li>
@@ -1103,27 +1103,27 @@
 <li>Drag Coefficient</li>
 </ul>
 </li>
-<li><code>A</code>: float = $\pi (1.77/2)^2 m^2$<ul>
+<li><code>A</code>: float = <span class="arithmatex">\(\pi (1.77/2)^2 m^2\)</span><ul>
 <li>Area of the satellite</li>
 </ul>
 </li>
-<li><code>m_s</code>: float = $479 kg$<ul>
+<li><code>m_s</code>: float = <span class="arithmatex">\(479 kg\)</span><ul>
 <li>Mass of the satellite</li>
 </ul>
 </li>
-<li><code>R_star</code>: float = $8.3144598 J mol^{-1}K^{-1}$<ul>
+<li><code>R_star</code>: float = <span class="arithmatex">\(8.3144598 J mol^{-1}K^{-1}\)</span><ul>
 <li>Universal ideal gas constant</li>
 </ul>
 </li>
-<li><code>g_0:</code>  float = $9.80665 m s^{-2}$<ul>
+<li><code>g_0:</code>  float = <span class="arithmatex">\(9.80665 m s^{-2}\)</span><ul>
 <li>Gravitational acceleration at Earth’s surface</li>
 </ul>
 </li>
-<li><code>M_molar</code>: float = $0.0289644 kg mol^{-1}$<ul>
+<li><code>M_molar</code>: float = <span class="arithmatex">\(0.0289644 kg mol^{-1}\)</span><ul>
 <li>Molar mass of Earth’s air</li>
 </ul>
 </li>
-<li><code>omega_E</code>: float = $7.2921150 × 10⁻⁵ rad s^{-1}$<ul>
+<li><code>omega_E</code>: float = <span class="arithmatex">\(7.2921150 × 10⁻⁵ rad s^{-1}\)</span><ul>
 <li>Angular rotation rate of the Earth</li>
 </ul>
 </li>
@@ -1190,9 +1190,11 @@
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+        <script src="../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
