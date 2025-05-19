@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/visuliser/">
+        <link rel="canonical" href="https://mydomain.org/mysite/en/">
       
       
-        <link rel="prev" href="../create/">
+        <link rel="prev" href="../cfg/">
       
+      
+        <link rel="next" href="../ext/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Satellite Re-entry Visualisation Demo (temp for 1D) - Orbit Decay ES98B-ISEE-Documentation</title>
+        <title>Environment & Dependencies - Orbit Decay ES98B-ISEE-Documentation</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#satellite-re-entry-visualisation-demo-temp-for-1d" class="md-skip">
+        <a href="#environment-dependencies" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Satellite Re-entry Visualisation Demo (temp for 1D)
+              Environment &amp; Dependencies
             
           </span>
         </div>
@@ -216,12 +218,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../create/" class="md-nav__link">
+      <a href="../cfg/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Built by MKDocs
+    Comprehensive Functionality Guide
     
   </span>
   
@@ -252,7 +254,7 @@
   
   
   <span class="md-ellipsis">
-    Satellite Re-entry Visualisation Demo (temp for 1D)
+    Environment &amp; Dependencies
     
   </span>
   
@@ -265,7 +267,7 @@
   
   
   <span class="md-ellipsis">
-    Satellite Re-entry Visualisation Demo (temp for 1D)
+    Environment &amp; Dependencies
     
   </span>
   
@@ -288,54 +290,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#module-structure" class="md-nav__link">
+  <a href="#environment-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Module Structure
+      Environment setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
+  <a href="#module-wise-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      What It Does
+      Module-wise dependencies
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-outputs" class="md-nav__link">
+  <a href="#package-wise-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Outputs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      ▶️ How to Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-plots" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Plots
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
+      Package-wise dependencies
     </span>
   </a>
   
@@ -345,6 +320,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extending Functionality
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -376,54 +373,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#module-structure" class="md-nav__link">
+  <a href="#environment-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Module Structure
+      Environment setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
+  <a href="#module-wise-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      What It Does
+      Module-wise dependencies
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-outputs" class="md-nav__link">
+  <a href="#package-wise-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Outputs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      ▶️ How to Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-plots" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Plots
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
+      Package-wise dependencies
     </span>
   </a>
   
@@ -445,61 +415,113 @@
 
 
 
-<h1 id="satellite-re-entry-visualisation-demo-temp-for-1d">Satellite Re-entry Visualisation Demo (temp for 1D)</h1>
-<p>This module demonstrates a simple 1D satellite de-orbit simulation and visualisation workflow.</p>
-<p>test</p>
-<h2 id="module-structure">Module Structure</h2>
-<ul>
-<li>
-<p><strong><code>vis_test.py</code></strong> — Temporary test script. Runs the simulator, saves output, and calls the visualiser module.</p>
-</li>
-<li>
-<p><strong><code>visualiser.py</code></strong> — Contains reusable plotting functions for:</p>
-</li>
-<li>Altitude vs. Time (with optional noisy measurements)</li>
-<li>Velocity vs. Time</li>
-<li>Trajectory (x vs y)</li>
-</ul>
-<h2 id="what-it-does">What It Does</h2>
-<ol>
-<li><strong>Simulates satellite de-orbit</strong> using basic physics:</li>
-<li>Gravity and atmospheric drag</li>
-<li>Altitude-based air density</li>
-<li><strong>Applies Gaussian noise</strong> to simulate radar altitude measurements</li>
-<li><strong>Saves results</strong> to a <code>.npz</code> file (<code>sim_output.npz</code>)</li>
-<li><strong>Visualises</strong>:</li>
-<li>Altitude decay with/without noise</li>
-<li>Horizontal and vertical velocities over time</li>
-<li>Descent trajectory</li>
-</ol>
-<h2 id="sample-outputs">Sample Outputs</h2>
-<ul>
-<li>Altitude drops from ~120 km to 0 m</li>
-<li>Velocity changes due to air drag</li>
-<li>Noisy radar measurements show uncertainty in real-world conditions</li>
-</ul>
-<h2 id="how-to-run">▶️ How to Run</h2>
-<p>Ensure you have Python 3 and required packages:</p>
-<pre><code class="language-bash">pip install numpy scipy matplotlib
-</code></pre>
-<p>Then run:</p>
-<pre><code class="language-bash">python vis_test.py
-</code></pre>
-<p>This will:
-- Execute the simulation
-- Save results to <code>sim_output.npz</code>
-- Automatically display visual plots</p>
-<h2 id="example-plots">Example Plots</h2>
-<p>Plots are rendered with <code>matplotlib</code> and show:
-- True vs. measured altitude
-- Velocity profiles
-- Descent path</p>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>This is based on a 1D flat-Earth simplification</li>
-<li>Intended for use as an early-stage simulator for larger orbital tracking projects</li>
-<li>Code is modular and ready to be extended with more physics (2D/3D, non-linear dynamics, EKF etc.)</li>
-</ul>
+<h1 id="environment-dependencies">Environment &amp; Dependencies</h1>
+<h3 id="environment-setup">Environment setup</h3>
+<p>To ensure smooth execution and modular usage of the project, please follow the environment setup guidelines below. The system should be compatible across platforms, but this has not been rigorously tested.</p>
+<hr />
+<p><strong>Recommended Global Environment</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Recommended Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python Version</td>
+<td>Python ≥ 3.10</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Windows 10/11, MacOS, or Linux</td>
+</tr>
+<tr>
+<td>Package Manager</td>
+<td><code>pip</code> or <code>conda</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="module-wise-dependencies">Module-wise dependencies</h3>
+<p>The project is designed with a modular, class-based architecture, allowing individual components (e.g., the simulator, predictor, or visualiser) to be executed or extended independently.</p>
+<p>We explicitly state the dependency versions to ensure long-term maintainability, prevent future compatibility issues, and support modular reuse or integration in other systems.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Path</th>
+<th>Python Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simulator</strong></td>
+<td><code>SkyFall/simulator/</code></td>
+<td><strong>≥ 3.10</strong></td>
+<td>Uses <code>NumPy</code>, <code>SciPy</code>; any version ≥3.10 is sufficient for numerical solvers</td>
+</tr>
+<tr>
+<td><strong>Predictor</strong></td>
+<td><code>SkyFall/predictor/</code></td>
+<td><strong>3.x</strong></td>
+<td>EKF, compatible with any modern Python 3 version</td>
+</tr>
+<tr>
+<td><strong>Visualiser</strong></td>
+<td><code>SkyFall/visualisation/</code></td>
+<td><strong>≥ 3.10</strong></td>
+<td>Uses <code>matplotlib</code>, <code>cartopy</code> (include link); tested with 3.10+</td>
+</tr>
+<tr>
+<td><strong>Utils</strong></td>
+<td><code>SkyFall/utils/</code></td>
+<td>–</td>
+<td>Shared functions, no specific requirements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="package-wise-dependencies">Package-wise dependencies</h3>
+<p>This project relies on several third-party Python packages for numerical integration, state estimation, visualisation and much more. Below is a complete list of dependencies used across all modules, along with module-specific usage notes and special considerations.</p>
+<p><strong>Required Packages</strong></p>
+<p>To use SkyFall, the following third-party packages are required. For the full list of required dependencies and their versions, please see <code>requirements.txt</code>. </p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+<th>Used In Modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy</code></td>
+<td>Core numerical computation, array operations</td>
+<td>Multiple modules</td>
+</tr>
+<tr>
+<td><code>scipy</code></td>
+<td>ODE solver (<code>solve_ivp</code>)</td>
+<td><code>simulator</code>, <code>utils</code>, <code>visualiser</code></td>
+</tr>
+<tr>
+<td><code>matplotlib</code></td>
+<td>Static plotting</td>
+<td><code>visualiser</code></td>
+</tr>
+<tr>
+<td><code>tqdm</code></td>
+<td>Progress bar for loops</td>
+<td><code>visualiser</code>, <code>simulator</code></td>
+</tr>
+<tr>
+<td><code>sympy</code></td>
+<td>Symbolic matrix construction (Jacobians)</td>
+<td><code>utils/analytical_F.py</code>, <code>utils/analytical_H.py</code></td>
+</tr>
+</tbody>
+</table>
+<p>Note: built-in standard libraries such as <code>os</code>, <code>sys</code>, <code>datetime</code>, <code>time</code>, <code>math</code>, and <code>json</code> are also used across multiple modules, but do not require separate installation.</p>
 
 
 
